@@ -21,21 +21,6 @@
         .neon-cyan { box-shadow: 0 0 25px rgba(34, 211, 238, 0.6); }
         .neon-purple { box-shadow: 0 0 25px rgba(168, 85, 247, 0.6); }
         
-        .timeline-line {
-            height: 4px;
-            background: linear-gradient(to right, #22d3ee, #a855f7);
-            animation: flow 4s linear infinite;
-        }
-        
-        @keyframes flow {
-            0% { background-position: 0% 0; }
-            100% { background-position: 200% 0; }
-        }
-        
-        .hero-bg {
-            background: radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.15), transparent 60%);
-        }
-        
         .platform-btn {
             background: rgba(30, 41, 59, 0.6);
             border: 1px solid rgba(148, 163, 184, 0.3);
@@ -48,100 +33,97 @@
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
+<body class="bg-zinc-950 text-zinc-200 overflow-x-hidden min-h-screen">
 
-    <!-- HERO -->
-    <div class="hero-bg min-h-screen flex items-center relative">
-        <div class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
-            <div class="inline-flex items-center gap-3 bg-zinc-900/80 px-6 py-2 rounded-full border border-cyan-500/30 mb-8">
-                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+    <!-- HERO – уменьшили высоту на мобильке -->
+    <div class="hero-bg min-h-[70vh] sm:min-h-screen flex items-center relative px-4 sm:px-0">
+        <div class="max-w-5xl mx-auto w-full text-center py-12 sm:py-0">
+            <div class="inline-flex items-center gap-2 sm:gap-3 bg-zinc-900/80 px-4 sm:px-6 py-2 rounded-full border border-cyan-500/30 mb-6 text-sm sm:text-base">
+                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span class="font-medium tracking-widest">ONLINE • 1243 человека</span>
             </div>
             
-            <h1 class="logo-font text-6xl md:text-8xl font-bold leading-none tracking-tighter mb-6">
-                RODRIGO<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">GUARD</span>
+            <h1 class="logo-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter mb-4 sm:mb-6">
+                NEON<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">GUARD</span>
             </h1>
-            <p class="text-xl md:text-3xl text-zinc-400 max-w-3xl mx-auto">
-                Самый быстрый и стабильный обход блокировок 2026<br>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-zinc-400 max-w-xl sm:max-w-3xl mx-auto px-2">
+                Самый быстрый обход блокировок 2026<br class="hidden sm:block">
                 VLESS + Reality • Без логов • Работает везде
             </p>
             
-            <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
                 <a href="https://t.me/твой_бот" target="_blank"
-                   class="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black font-bold text-2xl px-12 py-7 rounded-3xl flex items-center justify-center gap-4 transition-all active:scale-95 shadow-2xl neon-cyan">
+                   class="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black font-bold text-xl sm:text-2xl px-10 sm:px-14 py-6 sm:py-8 rounded-2xl sm:rounded-3xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-2xl neon-cyan">
                     Подключиться за 30 сек
                     <i class="fa-solid fa-arrow-right group-active:rotate-45 transition-transform"></i>
                 </a>
                 <a href="#how" 
-                   class="border border-zinc-500 hover:border-white text-xl font-medium px-10 py-7 rounded-3xl transition-all">
+                   class="border border-zinc-500 hover:border-white text-lg sm:text-xl font-medium px-8 sm:px-10 py-6 sm:py-8 rounded-2xl sm:rounded-3xl transition-all">
                     Как подключиться →
                 </a>
             </div>
         </div>
         
-        <!-- Плавающая карточка подписки -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 glass rounded-3xl p-6 w-full max-w-md mx-4 neon-cyan">
-            <div class="flex items-center gap-5">
-                <div class="text-5xl">🔥</div>
+        <!-- Плавающая карточка – адаптивная позиция и размер -->
+        <div class="fixed bottom-4 left-4 right-4 sm:bottom-10 sm:left-1/2 sm:-translate-x-1/2 glass rounded-2xl sm:rounded-3xl p-4 sm:p-6 w-auto max-w-[95%] sm:max-w-md neon-cyan text-sm sm:text-base">
+            <div class="flex items-center gap-3 sm:gap-5">
+                <div class="text-4xl sm:text-5xl">🔥</div>
                 <div class="flex-1">
-                    <div class="text-cyan-400 font-mono text-3xl font-bold">87KX9P2V</div>
-                    <div class="text-zinc-400 text-sm">Активна • 19 дней осталось</div>
+                    <div class="text-cyan-400 font-mono text-xl sm:text-3xl font-bold">87KX9P2V</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm">Активна • 19 дней осталось</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- КАК ПОДКЛЮЧИТЬСЯ -->
-<!-- Внутри <div id="how" class="max-w-5xl mx-auto px-6 py-20 md:py-24"> -->
-
-<h2 class="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16">4 шага — и ты в сети</h2>
-
-<!-- Переключатель платформ (оставляем как есть) -->
-<div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
-    <button onclick="selectPlatform(0)" class="platform-btn active px-6 md:px-10 py-3 md:py-4 rounded-2xl md:rounded-3xl text-base md:text-lg font-medium transition-all">Windows</button>
-    <button onclick="selectPlatform(1)" class="platform-btn px-6 md:px-10 py-3 md:py-4 rounded-2xl md:rounded-3xl text-base md:text-lg font-medium transition-all">Android</button>
-    <button onclick="selectPlatform(2)" class="platform-btn px-6 md:px-10 py-3 md:py-4 rounded-2xl md:rounded-3xl text-base md:text-lg font-medium transition-all">iOS</button>
-    <button onclick="selectPlatform(3)" class="platform-btn px-6 md:px-10 py-3 md:py-4 rounded-2xl md:rounded-3xl text-base md:text-lg font-medium transition-all">macOS</button>
-</div>
-
-<!-- Timeline -->
-<div class="relative max-w-4xl mx-auto">
-    <div class="absolute left-8 md:left-12 top-12 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-purple-500 to-transparent rounded-full opacity-70"></div>
-    
-    <div class="space-y-16 md:space-y-24">
-        <!-- Шаг 1 -->
-        <div class="flex gap-6 md:gap-8 relative">
-            <div class="w-14 h-14 md:w-16 md:h-16 bg-zinc-900 border-4 border-cyan-400 rounded-2xl flex items-center justify-center text-2xl md:text-3xl flex-shrink-0 z-10 neon-cyan">1</div>
-            <div class="flex-1">
-                <h3 class="text-2xl md:text-3xl font-semibold mb-3">Скачай клиент</h3>
-                <p id="step-desc" class="text-zinc-300 text-base md:text-lg leading-relaxed mb-4">
-                    Hiddify Next — самый стабильный клиент на Sing-box / Xray. Полная поддержка VLESS + Reality.
-                </p>
-                <a id="download-btn" href="https://github.com/hiddify/hiddify-next/releases/latest" target="_blank"
-                   class="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black font-bold px-8 py-5 rounded-2xl transition-all shadow-lg text-lg md:text-xl">
-                    Скачать для Windows
-                </a>
-                
-                <!-- Новая подсказка -->
-                <p id="hint-text" class="mt-5 text-zinc-500 text-sm md:text-base leading-relaxed">
-                    После скачивания запусти файл → разреши установку (если Windows спросит) → импортируй подписку из бота.
-                </p>
-            </div>
+    <!-- КАК ПОДКЛЮЧИТЬСЯ – адаптивные отступы, текст, кнопки -->
+    <div id="how" class="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-16">4 шага — и ты в сети</h2>
+        
+        <!-- Платформы – кнопки меньше на мобильке -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10 sm:mb-16">
+            <button onclick="selectPlatform(0)" class="platform-btn active px-5 sm:px-10 py-3 sm:py-4 rounded-xl sm:rounded-3xl text-base sm:text-lg font-medium transition-all">Windows</button>
+            <button onclick="selectPlatform(1)" class="platform-btn px-5 sm:px-10 py-3 sm:py-4 rounded-xl sm:rounded-3xl text-base sm:text-lg font-medium transition-all">Android</button>
+            <button onclick="selectPlatform(2)" class="platform-btn px-5 sm:px-10 py-3 sm:py-4 rounded-xl sm:rounded-3xl text-base sm:text-lg font-medium transition-all">iOS</button>
+            <button onclick="selectPlatform(3)" class="platform-btn px-5 sm:px-10 py-3 sm:py-4 rounded-xl sm:rounded-3xl text-base sm:text-lg font-medium transition-all">macOS</button>
         </div>
 
-        <!-- Шаг 2 (оставляем как есть, или добавь туда тоже подсказку позже) -->
-        <div class="flex gap-6 md:gap-8 relative">
-            <div class="w-14 h-14 md:w-16 md:h-16 bg-zinc-900 border-4 border-purple-400 rounded-2xl flex items-center justify-center text-2xl md:text-3xl flex-shrink-0 z-10 neon-purple">2</div>
-            <div class="flex-1">
-                <h3 class="text-2xl md:text-3xl font-semibold mb-3">Добавь подписку</h3>
-                <p class="text-zinc-300 text-base md:text-lg mb-6">Открой бота → выбери тариф → получи ключ/подписку автоматически</p>
-                <a href="https://t.me/твой_бот" target="_blank"
-                   class="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-black font-bold px-10 py-5 rounded-2xl hover:scale-105 transition-all shadow-lg">
-                    Открыть бота и добавить ключ
-                </a>
+        <!-- Timeline – отступы и размеры уменьшены -->
+        <div class="relative max-w-4xl mx-auto">
+            <div class="absolute left-6 sm:left-12 top-10 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-purple-500 to-transparent rounded-full opacity-70"></div>
+            
+            <div class="space-y-12 sm:space-y-24">
+                <div class="flex gap-4 sm:gap-8 relative">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-zinc-900 border-4 border-cyan-400 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-3xl flex-shrink-0 z-10 neon-cyan">1</div>
+                    <div class="flex-1 pr-2 sm:pr-0">
+                        <h3 class="text-xl sm:text-3xl font-semibold mb-2 sm:mb-3">Скачай клиент</h3>
+                        <p id="step-desc" class="text-zinc-300 text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
+                            Hiddify Next — самый стабильный клиент на Sing-box / Xray.
+                        </p>
+                        <a id="download-btn" href="#" target="_blank"
+                           class="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black font-bold px-6 sm:px-8 py-4 sm:py-5 rounded-xl sm:rounded-2xl transition-all shadow-lg text-base sm:text-xl">
+                            Скачать
+                        </a>
+                        <p id="hint-text" class="mt-4 text-zinc-500 text-sm sm:text-base leading-relaxed">
+                            После скачивания запусти → импортируй подписку из бота.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 sm:gap-8 relative">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-zinc-900 border-4 border-purple-400 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-3xl flex-shrink-0 z-10 neon-purple">2</div>
+                    <div class="flex-1 pr-2 sm:pr-0">
+                        <h3 class="text-xl sm:text-3xl font-semibold mb-2 sm:mb-3">Добавь подписку</h3>
+                        <p class="text-zinc-300 text-base sm:text-lg mb-4 sm:mb-6">Открой бота → выбери тариф → получи ключ автоматически</p>
+                        <a href="https://t.me/твой_бот" target="_blank"
+                           class="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-black font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl hover:scale-105 transition-all shadow-lg text-base sm:text-lg">
+                            Открыть бота
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
    <script>
    const platforms = [
     { // 0 - Windows
@@ -201,4 +183,5 @@ function selectPlatform(index) {
 window.onload = () => selectPlatform(0);
 </script>
 </body>
+
 </html>
